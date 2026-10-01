@@ -25,7 +25,7 @@ d3.csv("lanadelrey.csv").then(function(data) {
     .domain([2012, 2023])
     .range([50, 800 ]);
     
-// how to look up how to get rid of commas for numbers
+// x axis
   const xAxis = d3.axisBottom(xScale)
     .tickFormat(d3.format("d"));
 
@@ -40,7 +40,7 @@ d3.csv("lanadelrey.csv").then(function(data) {
     .domain([0, 10])
     .range([390, 30]);
 
-  // "pitchfork score", // how to  rotate text 
+  // "pitchfork score"
   svg.append("text")
     .attr("x", -300 )
     .attr("y", 20)
@@ -49,7 +49,7 @@ d3.csv("lanadelrey.csv").then(function(data) {
     .attr("fill", "grey");
 
 
-//vertical lines , how to make vertical lines, 
+//vertical lines 
 
   svg.selectAll(".pitchfork-line")
     .data(data)
@@ -69,8 +69,7 @@ d3.csv("lanadelrey.csv").then(function(data) {
 
 
 
-  //circle colors and info 
-  //circle size 
+  //circles
 
   const sizeScale = d3.scaleLinear()
     .domain([2700, 4700])
